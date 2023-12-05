@@ -1,0 +1,42 @@
+footer {
+   background: #fff;
+   display: flex;
+   flex-direction: column;
+   padding: 1rem 2rem;
+}
+
+.footer-wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.footer-wrapper nav {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+}
+
+
+nav ul li {
+   list-style-type: none;
+}
+
+nav ul h2 {
+   font-size: 12px;
+   font-weight: bold;
+   padding: 6px;
+}
+
+nav ul li button {
+   list-style-type: none;
+   font-size: 12px;
+   color: #33323296;
+   cursor: pointer;
+}
+
+.btn-default {
+   background: none;
+   border:  none;
+   padding: 7px;
+}
