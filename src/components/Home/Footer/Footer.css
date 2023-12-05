@@ -35,8 +35,141 @@ nav ul li button {
    cursor: pointer;
 }
 
+.footer-info h1 {
+   font-size: 12px;
+   font-weight: bold;
+   padding: 1rem 0px;
+}
+
+.footer-info p {
+   font-size: 12px;
+   color: #33323296;
+}
+
 .btn-default {
    background: none;
    border:  none;
    padding: 7px;
+   outline: none;
+}
+
+.btn-default:focus {
+   outline: none;
+   border: 2px solid #0000ff;
+   border-radius: 4px;
+}
+
+.socials {
+   margin-top: 2rem;
+   display: flex;
+   justify-content: space-between;
+   border-top: 2px solid #eee;
+   padding-top: 1rem;
+}
+
+.socials p {
+   color: #33323296;
+   font-size: 12px;  
+}
+
+.socials div {
+   display: flex;
+   gap: 4px;  
+}
+
+.logo {
+   border: 1px solid #eee;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+}
+
+.footer-banner {
+   background: #ffa500;
+   height: 300px;
+   position: relative;
+   overflow: hidden;
+}
+
+.footer-main {
+   height: 100%;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.footer-banner .info {
+   width: 100%;
+}
+
+.footer-main {
+   display: flex;
+}
+
+.wrapper-footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.banner-design-a {
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   background: #be800c30;
+}
+
+.banner-design-b {
+   width: 300px;
+   height: 300px;
+   background: #be800c30;
+   border-radius: 50%;
+}
+.banner-design-c {
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   background: #be800c4d;
+}
+.banner-design-d {
+   width: 300px;
+   height: 300px;
+   border-radius: 50%;
+   background: #be800c76;
+}
+
+.wrapper-footer h1 {
+   color: #fff;
+   font-size: 25px;
+   font-weight: 300;
+}
+
+.wrapper-footer p{
+   color: #fff;
+   font-size: 12px;
+}
+
+.wrapper-footer .wrapp{
+   display: flex;
+   gap: 1rem;
+   margin-top: 1rem;
+}
+
+.app-button {
+   background: #fff;
+   border-radius: 30px;
+   padding: .7rem 2rem;
+   border:.78px solid #fff;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+@media (max-width: 1115px) {
+   .footer-main {
+      width: fit-content;
+   }
 }

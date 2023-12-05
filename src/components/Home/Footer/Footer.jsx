@@ -3,6 +3,30 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
+    <>
+    <div className="footer-banner">
+      <div className="footer-main">
+         <div className="banner-design-a"></div>
+         <div className="banner-design-b"></div>
+         <div className="banner-design-c"></div>
+         <div className="banner-design-d"></div>
+      </div>
+      <div className="footer-main info">
+         <div className="wrapper-footer">
+            <h1>DownLoad for free</h1>
+            <p>Revolutionize your task Achieve your goals, one task at a time. Grab your download and get started</p>
+            <div className="wrapp">
+               <button className="app-button">
+                  App Store
+               </button>
+               <button className="app-button">
+                  Google Store
+               </button>
+            </div>
+         </div>
+      </div>
+    </div>
+      
     <footer>
       <div className="footer-wrapper">
         <div>
@@ -55,30 +79,31 @@ const Footer = () => {
             </li>
           </ul>
         </nav>
-        <div>
+        <div className="footer-info">
           <h1>Let's Talk</h1>
           <p>hello@planoo.ai</p>
           <p>Black M Square</p>
         </div>
       </div>
-      <div>
+      <div class="socials">
         <div>
-          <button>
+          <button className="btn-default logo">
             <span>F</span>
           </button>
-          <button>
+          <button className="btn-default logo">
             <span>I</span>
           </button>
-          <button>
+          <button className="btn-default logo">
             <span>T</span>
           </button>
-          <button>
+          <button className="btn-default logo">
             <span>In</span>
           </button>
         </div>
-        <div>Odamo. All right reserved &copy; 2023</div>
+        <p>Odamo. All right reserved &copy; 2023</p>
       </div>
     </footer>
+    </>
   );
 };
 
