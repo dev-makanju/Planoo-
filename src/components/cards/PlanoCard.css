@@ -1,0 +1,19 @@
+.planno_main {
+   background: #EEE;
+}
+
+.planno_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px , 1fr));
+  gap: 10px;
+  width: 60%;
+  margin: 0px auto;
+}
+
+.pla_container {
+   border-radius: 8px;
+   border: 1px solid #eee;
+   padding: 7px;
+   min-width: 300px;
+   background: #FFF;
+}

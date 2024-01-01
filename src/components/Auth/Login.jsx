@@ -1,11 +1,11 @@
 import {useState} from 'react'
-import { useAuth } from '../hooks/AuthProvider';
+import { useAuth } from '../../hooks/AuthProvider';
 import './style.css';
 
 const Login = () => {
    const [input, setInput] = useState({
       username: '',
-      password: ''
+      password: '',
    })
    const auth = useAuth();
    const handleSubmitEvent = (e) => {

@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import './Header.css';
+
 
 const Header = () => {
   return (
@@ -28,7 +30,9 @@ const Header = () => {
         </ul>
       </nav>
       <div>
-         <button class="reg-btn">Register</button>
+        <Link to='/login'>
+          <button  class="reg-btn">Sign In</button>
+        </Link>
       </div>
    </header>
   )
