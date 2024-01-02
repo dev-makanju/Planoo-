@@ -1,0 +1,72 @@
+.planno_main {
+   background: #EEE;
+   padding: 5rem 0px;
+}
+
+.pla_card_title h1{
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+
+}
+
+.planno_wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px , 1fr));
+  gap: 10px;
+  width: 60%;
+  margin: 0px auto;
+}
+
+.pla_container {
+   border-radius: 17px;
+   border: 2px solid rgba(126, 123, 123, 0.185);
+   padding: 1rem;
+   background: #FFF;
+}
+
+.pla_container p {
+   font-size: 16px;
+   color: #333232e3;
+   font-weight: 500;
+}
+
+.social_img_logo {
+   background: #000;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transform: translateX(-10px);
+}
+
+.pla_image_wrapper {
+   width: 100px;
+   height: 41px;
+   margin-bottom: 1rem;
+}
+
+.pla_image_wrapper img {
+   float: left; 
+}
+
+.pla_card {
+  margin-top: 2rem;
+}
+
+.pla_card h1 {
+   font-size: 14px;
+   color: #3332328b;
+}
+
+.pla_card p {
+  font-size: 10px;
+  color: #3332325d;
+}
+
+.logoX {
+   color: #fff!important;
+   font-size: 14px!important;
+}
