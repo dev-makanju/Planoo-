@@ -1,0 +1,81 @@
+.ads-wrapper {
+   display: flex;
+   flex-direction: column;
+   margin: 6rem auto;
+   width: 60%;
+   gap: 2rem;
+}
+
+.progress-banner {
+   display: grid;
+   gap: 2rem;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.top-banner {
+   display: flex;
+   flex-direction: row;
+   gap: 1rem;
+   background: #ffff008a;
+   border-radius: 17px;
+   padding: 1rem;
+   min-height: 350px;
+}
+
+.top-banner div {
+   flex: 1;
+}
+
+.orang {
+   background: orange;
+   min-height: 350px;
+   padding: 1rem;
+   border-radius: 17px;
+}
+
+.light-blu {
+   background: rgba(223, 187, 223, 0.741);
+   min-height: 350px;
+   padding: 1rem;
+   border-radius: 17px;
+}
+
+.text-main h2 {
+   color: #fff;
+   font-weight: bold;
+   margin-bottom: 1rem;
+}
+
+.text-main p {
+   color: #fff;
+   font-size: 14px;
+}
+
+.top-banner h2 {
+   color: #000;
+   font-weight: bold;
+   margin-bottom: 1rem;    
+}
+
+
+.top-banner p {
+   color: #000;
+   font-size: 14px;
+}
+
+.btn-banner-wrapper {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 3rem;
+}
+
+.btn-banner {
+   background: #fff;
+   padding: 8px;
+   border-radius: 20px;
+   margin-bottom: 1rem;
+   width: fit-content;
+   font-size: 12px;
+}
