@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Auth/Login.jsx';
 import Dashboard from './components/Dashboard';
 import HomePage from './pages/HomePage.jsx';
+import RegisterPage from './pages/RegisterPage.jsx';
 import AuthProvider from './hooks/AuthProvider';
 import PrivateRoute from './router/route';
 import './App.css'
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/login" element={<Login />} />
+            <Route path='/register' element={<RegisterPage/>}/>
             <Route element={<PrivateRoute/>}>
               <Route path="/dashboard" element={<Dashboard/>} />
             </Route>

@@ -1,5 +1,6 @@
 import { useContext , createContext , useState} from 'react';
 import { useNavigate } from "react-router-dom";
+//import { googleLogout } from '@react-oauth/google';
 
 const AuthContext = createContext();
 
@@ -29,7 +30,34 @@ const AuthProvider = ({children}) => {
       alert(err);
     }
   }
-
+  const registerAction = () => {
+    //register logic
+  }
+  const googleAuthResponse = async (res) => {
+    try {
+      setToken(res.credential);
+      setUser(res);
+      const user = await fetch(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${res.credential}`, {
+        method: "GET",
+        headers: {
+          "Authorization": `Bearer ${res.credential}`,
+          "Accept": "application/json",
+        },
+      })
+      if(user.status === 200){
+        console.log(user);
+        navigate('/dashboard')
+        return;
+      }
+      throw Error(user)
+    }catch(err){
+      console.log(err, 'error');
+    }
+  }
+  const googleAuthError = (err) => {
+    //show flash
+    console.log(err);
+  }
   const logOut = () => {
     setUser(null);
     setToken('');
@@ -38,7 +66,7 @@ const AuthProvider = ({children}) => {
   }
   
   return (
-    <AuthContext.Provider value={{ token, user, loginAction, logOut }}>
+    <AuthContext.Provider value={{ token, user, loginAction,googleAuthResponse, googleAuthError, registerAction, logOut }}>
       {children}
     </AuthContext.Provider>
   )

@@ -1,8 +1,11 @@
 import {useState} from 'react'
 import { useAuth } from '../../hooks/AuthProvider';
+import { useNavigate } from 'react-router-dom';
+import SocialAuth from './SocialAuth';
 import './style.css';
 
 const Login = () => {
+   const navigate  = useNavigate();
    const [input, setInput] = useState({
       username: '',
       password: '',
@@ -25,38 +28,46 @@ const Login = () => {
    }
    
    return (
-      <form onSubmit={handleSubmitEvent}>
-         <div className='form_control'>
-            <label htmlFor="username">Email:</label>
-            <input 
-               type="text"
-               id="username"
-               name="username"
-               placeholder='example@yahoo.com'
-               aria-describedby="user-email"
-               aria-invalid="false"
-               onChange={handleInput}
-            />
-            <div id="user-email" className="sr-only">
-               Please enter a valid username. It must contain at least 6 characters.  
+      <>
+         <form onSubmit={handleSubmitEvent}>
+            <h1>Login</h1>
+            <div className='form_control'>
+               <label htmlFor="username">Email:</label>
+               <input 
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder='example@yahoo.com'
+                  aria-describedby="user-email"
+                  aria-invalid="false"
+                  onChange={handleInput}
+               />
+               <div id="user-email" className="sr-only">
+                  Please enter a valid username. It must contain at least 6 characters.  
+               </div>
             </div>
+            <div className='form_control'>
+               <label htmlFor="password">Password:</label>
+               <input 
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder='password'
+                  aria-describedby="user-password"
+                  aria-invalid="false"
+                  onChange={handleInput}
+               />
+               <div id="user-password" className="sr-only">
+                  your password should be more than 6 character  
+               </div>
+            </div> 
+            <button className='btn-submit'>Submit</button>  
+            <p>Need an account? <span className='register-link' onClick={() => navigate('/register')}>register here</span></p>
+         </form>
+         <div className='social-signing'>
+            <SocialAuth/>
          </div>
-         <div className='form_control'>
-            <label htmlFor="password">Password:</label>
-            <input 
-               type="password"
-               id="password"
-               name="password"
-               aria-describedby="user-password"
-               aria-invalid="false"
-               onChange={handleInput}
-            />
-            <div id="user-password" className="sr-only">
-               your password should be more than 6 character  
-            </div>
-         </div> 
-         <button className='btn-submit'>Submit</button>  
-      </form>
+      </>
    )
 }
 

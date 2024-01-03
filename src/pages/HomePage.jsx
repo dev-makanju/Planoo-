@@ -4,6 +4,7 @@ import Header from '../components/Home/header/Header';
 import Footer from '../components/Home/Footer/Footer';
 import PlannoCard from '../components/Home/cards/PlannoCard';
 import Accordion from '../components/Home/accordion/accordion'
+import Ads from '../components/Home/ads/advert';
 import '../components/Home/accordion/accordion.css';
 
 const HomePage = () => {
@@ -11,6 +12,7 @@ const HomePage = () => {
    <>
       <Header/>
       <Banner/>
+      <Ads/>
       <PlannoCard/>
       <div className='accordion-wrapper'>
         <div className='accordion'>

@@ -42,10 +42,40 @@ form {
 }
 
 .btn-submit {
-   background: #800080;
+   background: #ffa500;
    border: none;
    padding: 7px;
    border-radius: 5px;
-   color: #eee;
+   color: #000;
    margin-top: 1rem;
+}
+
+form {
+   max-width: 500px;
+   margin: 0px auto;
+   margin-top: 4rem;
+}
+
+form h1 {
+   padding: 1rem 0px;
+   font-weight: 500;
+}
+
+form p{
+   font-size: 12px;
+   color: rgb(99, 96, 96);
+   padding: 1rem 0px;
+}
+
+.register-link {
+   color: blue;
+   cursor: pointer;
+}
+
+.social-signing {
+   max-width: 500px;
+   margin: 0px auto;
+   margin-top: 2rem;
+   display: flex;
+   justify-content: center;   
 }
