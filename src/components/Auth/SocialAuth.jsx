@@ -1,14 +1,14 @@
 import React from 'react'
-import { GoogleLogin } from '@react-oauth/google';
+//import { GoogleLogin } from '@react-oauth/google';
 import { useAuth } from '../../hooks/AuthProvider';
 
 const SocialAuth = () => {
    const user = useAuth()
    return (
-      <GoogleLogin 
-         onSuccess={user.googleAuthResponse} 
-         onError={user.googleAuthError} 
-      />
+      <div>
+         <button onClick={user.googleAuthResponse}>Continue with google</button>
+         <button onClick={user.googleAuthLogout}>log out google</button>
+      </div>
    )
 }
 
