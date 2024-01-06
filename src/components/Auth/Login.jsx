@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { useAuth } from '../../hooks/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-import SocialAuth from './SocialAuth';
+import SocialAuth from './socials/SocialAuth';
 import './style.css';
 
 const Login = () => {

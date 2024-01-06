@@ -1,0 +1,16 @@
+.google-btn {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   background: none;
+   border: .88px solid #eee;
+   padding: 10px;
+   border-radius: 17px;
+   color: #292727;
+   font-weight: 600;
+   cursor: pointer;
+}
+
+.google-btn span svg{
+   margin-right: 8px;
+}

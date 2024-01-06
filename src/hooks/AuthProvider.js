@@ -13,7 +13,7 @@ const AuthProvider = ({ children }) => {
             const response = await fetch('https://vuemadeeasy.onrender.com/auth/login', {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                  "Content-Type": "application/json",
                 },
                 body: JSON.stringify(data),
             })
@@ -35,8 +35,8 @@ const AuthProvider = ({ children }) => {
     }
 
     const googleAuthResponse = useGoogleLogin({
-        onSuccess: (codeResponse) => setUser(codeResponse),
-        onError: (error) => console.log('Login Failed:', error)
+      onSuccess: (codeResponse) => setUser(codeResponse),
+      onError: (error) => console.log('Login Failed:', error)
     });
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const AuthProvider = ({ children }) => {
       
               if (res.status === 200) {
                 const data = await res.json();
-                console.log(data);
+                setToken(user.access_token);
                 setUser(data);
                 navigate('/dashboard');
               } else {
@@ -64,8 +64,8 @@ const AuthProvider = ({ children }) => {
             }
           }
         };
-        fetchUserData(); // Call the async function
-      }, [user]);
+        fetchUserData();
+      },[user]);
 
     const googleAuthLogout = (err) => {
         googleLogout();
