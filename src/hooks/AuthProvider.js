@@ -53,9 +53,14 @@ const AuthProvider = ({ children }) => {
       
               if (res.status === 200) {
                 const data = await res.json();
+                const { expires_in } = data
                 setToken(user.access_token);
                 setUser(data);
+                console.log(user)
                 navigate('/dashboard');
+
+                //handle refresh token
+                //handleGoogleRefreshToken(expires_in)
               } else {
                 console.error(`Failed to fetch user information. Status: ${res.status}`);
               }
@@ -65,7 +70,30 @@ const AuthProvider = ({ children }) => {
           }
         };
         fetchUserData();
-      },[user]);
+    },[user]);
+  
+    // const handleGoogleRefreshToken = (tok_val) => {
+    //   console.log(tok_val)
+    //   const refreshToken = setTimeout( async() => {
+    //     try{
+    //       const refreshResponse = await fetch('YOUR_REFRESH_ENDPOINT', {
+    //           method: "POST",
+    //           headers: {
+    //               "Content-Type": "application/json",
+    //           },
+    //           body: JSON.stringify({ refreshToken: YOUR_REFRESH_TOKEN }),
+    //       });
+    //       const refreshData = await refreshResponse.json();
+    //       if(refreshData.data) {
+    //         console.log(refreshData);
+    //       }
+
+    //     }catch(err){
+
+    //     }
+    //   })
+    // }
+    
 
     const googleAuthLogout = (err) => {
         googleLogout();
@@ -73,6 +101,7 @@ const AuthProvider = ({ children }) => {
         navigate('/login');
         console.log('sucess')
     }
+
     const logOut = () => {
         setUser(null);
         setToken('');
