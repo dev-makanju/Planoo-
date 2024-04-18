@@ -1,0 +1,15 @@
+.btn.button {
+  padding: 7px;
+  border: 4px;
+  background: purple;
+  color: white;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border: 2px solid red;
+}

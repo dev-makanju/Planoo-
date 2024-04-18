@@ -5,9 +5,11 @@ import PlannoAI from './components/planno-ai/PlannoAI.jsx';
 import Task from '../src/components/task/Task';
 import HomePage from './pages/HomePage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
+import ContactPage from './pages/ContactPage.jsx';
 import AuthProvider from './hooks/AuthProvider';
 import PrivateRoute from './router/route';
 import './App.css'
+
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/manage-task" element={<Task/>} />
             <Route path="/planno-ai" element={<PlannoAI/>} />
+            <Route path="/contact" element={<ContactPage/>}/>
           </Routes>
         </AuthProvider>
       </Router>
