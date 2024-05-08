@@ -127,6 +127,17 @@ header {
    color: #7067677b;
 }
 
+.burger-click {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+
+.burger-click .menu{
+   display: none;
+}
+
 @media (max-width: 768px) {
    .banner-text {
       display: none;
@@ -140,8 +151,21 @@ header {
    .banner-text h1{
       font-size: 30px;
    }
+
+   .burger-click .menu{
+      display: block;
+   }
+
+   header nav{
+      display: none;
+   }
 }
 
+@media (max-width: 500px) {
+   .header-logo h1{
+     display: none;
+   }
+}
 
 .main-text{
    display: flex;

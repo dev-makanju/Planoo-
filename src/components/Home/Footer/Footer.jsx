@@ -1,5 +1,9 @@
 import React from "react";
 import "./Footer.css";
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
   return (
@@ -87,19 +91,17 @@ const Footer = () => {
       </div>
       <div class="socials">
         <div>
-          <button className="btn-default logo">
-            <span>
-              
-            </span>
+          <button>
+            <span><InstagramIcon/></span>
           </button>
-          <button className="btn-default logo">
-            <span>I</span>
+          <button>
+            <span><FacebookIcon/></span>
           </button>
-          <button className="btn-default logo">
-            <span>T</span>
+          <button>
+            <span><XIcon/></span>
           </button>
-          <button className="btn-default logo">
-            <span>In</span>
+          <button>
+            <span><LinkedInIcon/></span>
           </button>
         </div>
         <p>Odamo. All right reserved &copy; 2023</p>

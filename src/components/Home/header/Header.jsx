@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
 import './Header.css';
 
 const Header = () => {
+  const toggleNav = () => {
+
+  }
+
   return (
    <header>
       <button className="btn header-logo">
@@ -28,10 +33,15 @@ const Header = () => {
           </button>
         </ul>
       </nav>
-      <div>
-        <Link to='/login'>
-          <button  class="reg-btn">Sign In</button>
-        </Link>
+      <div className="burger-click">
+        <div>
+          <Link to='/login'>
+            <button  class="reg-btn">Sign In</button>
+          </Link>
+        </div>
+        <div onClick={()=> toggleNav} className="menu">
+          <MenuIcon/>
+        </div>
       </div>
    </header>
   )

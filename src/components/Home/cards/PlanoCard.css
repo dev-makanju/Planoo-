@@ -1,6 +1,6 @@
 .planno_main {
    background: #EEE;
-   padding: 5rem 0px;
+   padding: 4rem 0px;
 }
 
 .pla_card_title h1{
@@ -12,10 +12,16 @@
 
 .planno_wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px , 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px , 1fr));
   gap: 10px;
   width: 60%;
   margin: 0px auto;
+}
+
+@media (max-width: 768px) {
+   .planno_wrapper {
+      width: 80%;
+   }
 }
 
 .pla_container {
