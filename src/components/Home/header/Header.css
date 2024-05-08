@@ -114,23 +114,39 @@ header {
    flex: 1;
 }
 
-.banner-text h1{
-   font-size: 40px;
-   color: #7067677b;
-}
-
-.main-text{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
 .main-text .text-container {
    width: 60%;
    height: 80%;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+}
+
+.banner-text h1{
+   font-size: 40px;
+   color: #7067677b;
+}
+
+@media (max-width: 768px) {
+   .banner-text {
+      display: none;
+   }      
+
+   .main-text .text-container {
+      width: 80%;
+      height: 75%;
+   }
+
+   .banner-text h1{
+      font-size: 30px;
+   }
+}
+
+
+.main-text{
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .overlay-banner {

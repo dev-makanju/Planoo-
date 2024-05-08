@@ -10,10 +10,6 @@
    position: relative;
 }
 
-.accordion h2 {
-   color: rgb(36, 35, 35);
-}
-
 .btn-accordion {
    padding: 10px 15px;
    border-radius: 17px;
@@ -24,4 +20,21 @@
    position: absolute;
    bottom: 0;
    cursor: pointer;
+}
+
+@media(max-width: 768px){
+   .accordion-wrapper {
+      flex-direction: column-reverse;
+      width: 80%;
+   }
+
+   .btn-accordion {
+      position: relative;
+      margin-top: 2rem;
+   }
+   
+}
+
+.accordion h2 {
+   color: rgb(36, 35, 35);
 }

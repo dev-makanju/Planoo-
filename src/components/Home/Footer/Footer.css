@@ -8,12 +8,16 @@ footer {
 .footer-wrapper {
    display: flex;
    flex-direction: row;
+   flex-wrap: wrap;
    justify-content: space-between;
+   gap: 3rem;
 }
+
 
 .footer-wrapper nav {
    display: flex;
    flex-direction: row;
+   flex-wrap: wrap;
    gap: 1rem;
 }
 
@@ -77,6 +81,17 @@ nav ul li button {
    gap: 4px;  
 }
 
+@media (max-width: 768px) {   
+   .socials {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;  
+   }
+}
+
+
 .logo {
    border: 1px solid #eee;
    width: 30px;
@@ -114,6 +129,7 @@ nav ul li button {
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 2rem;
 }
 
 .banner-design-a {
@@ -171,5 +187,10 @@ nav ul li button {
 @media (max-width: 1115px) {
    .footer-main {
       width: fit-content;
+   }
+
+   .app-button {
+      font-size: 12px;
+      padding: .7rem 1rem;
    }
 }

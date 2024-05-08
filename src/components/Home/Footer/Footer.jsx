@@ -88,7 +88,9 @@ const Footer = () => {
       <div class="socials">
         <div>
           <button className="btn-default logo">
-            <span>F</span>
+            <span>
+              
+            </span>
           </button>
           <button className="btn-default logo">
             <span>I</span>
