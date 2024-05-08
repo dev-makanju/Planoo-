@@ -4,6 +4,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -60,15 +61,19 @@ const Footer = () => {
             <li>
               <button className="btn-default">Features</button>
             </li>
-            <li>
-              <button className="btn-default">About</button>
-            </li>
+            <Link to='/about'>
+              <li>
+                <button className="btn-default">About</button>
+              </li>
+            </Link>
             <li>
               <button className="btn-default">Pricing</button>
             </li>
-            <li>
-              <button className="btn-default">Blog</button>
-            </li>
+            <Link to='/blog'>
+              <li>
+                <button className="btn-default">Blog</button>
+              </li>
+            </Link>
           </ul>
           <ul>
             <h2>Policy</h2>

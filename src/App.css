@@ -9,3 +9,37 @@
 body{
    font-family: 'Poppins', sans-serif;
 }
+
+.link{
+   text-decoration: none;
+}
+
+.blog-main{
+   width: 80%;
+   margin: 0px auto;
+   min-height: 400px;
+   padding-bottom: 6rem;
+   padding-top: 3rem;
+}
+
+.blog-wrapper {
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.blog-is-empty {
+   display: flex;
+   justify-content: center;
+}
+
+.blog-is-empty h4 {
+   font-size: 28px;
+   color: #000000ba;
+}
+
+@media (max-width: 768px) {
+   .blog-main{
+      width: 90%;
+   }
+}
