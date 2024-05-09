@@ -1,8 +1,20 @@
 import React from 'react'
+import SinglePost from '../components/Blog/single-post/SinglePost'
+import RecentPost from '../components/Blog/recents/RecentPost'
 
 const SingleBlog = () => {
   return (
-    <div>SingleBlog</div>
+    <>
+      <title>My Site: Contact Us</title>
+      <div className='single-post'>
+        <div>
+          <SinglePost/>
+        </div>
+        <div>
+          <RecentPost/>
+        </div>
+      </div>
+    </>
   )
 }
 

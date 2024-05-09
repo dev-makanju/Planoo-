@@ -11,6 +11,8 @@ import AuthProvider from './hooks/AuthProvider';
 import PrivateRoute from './router/route';
 import GuestLayout from './components/layout/GuestLayout.jsx';
 import SingleBlog from './pages/SingleBlog.jsx';
+import PageTitle from './components/Nav/Meta/PageTitle.jsx';
+import NotFound from './pages/NotFound.jsx';
 import './App.css'
 
 function App() {
@@ -25,6 +27,12 @@ function App() {
             <Route path='/blog' element={<GuestLayout><Blog/></GuestLayout>}/>
             <Route path='/about' element={<GuestLayout><About/></GuestLayout>}/>
             <Route path='/blog/post/:id' element={<GuestLayout><SingleBlog/></GuestLayout>}/>
+            <Route exact path='/*' element={
+              <>
+                <PageTitle title='Not Found'/> 
+                <NotFound/>
+              </>
+            }/>
             <Route element={<PrivateRoute/>}>
               {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
             </Route>

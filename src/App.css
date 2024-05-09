@@ -14,6 +14,16 @@ body{
    text-decoration: none;
 }
 
+.single-post {
+   width: 80%;
+   margin: 0px auto;
+   min-height: 400px;
+   padding-bottom: 6rem;
+   padding-top: 1rem;
+   display: flex;
+   gap: 1rem;
+}
+
 .blog-main{
    width: 80%;
    margin: 0px auto;
@@ -41,5 +51,15 @@ body{
 @media (max-width: 768px) {
    .blog-main{
       width: 90%;
+   }
+   .single-post {
+      width: 90%;
+   }   
+}
+
+@media (max-width: 1024px) {
+   .single-post {
+      display: flex;
+      flex-direction: column;
    }
 }

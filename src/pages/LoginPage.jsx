@@ -1,9 +1,13 @@
 import React from 'react'
 import Login from '../components/Auth/Login';
+import PageTitle from '../components/Nav/Meta/PageTitle';
 
 const LoginPage = () => {
   return (
-   <Login/>
+    <>
+      <PageTitle title='Login'/>
+      <Login/> 
+    </>
   )
 }
 

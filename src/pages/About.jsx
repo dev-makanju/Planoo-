@@ -1,8 +1,12 @@
 import React from 'react'
+import PageTitle from '../components/Nav/Meta/PageTitle'
 
 const About = () => {
   return (
-    <div>About</div>
+    <>
+      <PageTitle title='About'/>
+      <div>About</div>
+    </>
   )
 }
 

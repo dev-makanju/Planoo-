@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Nav/header/Header.css';
+import '../Nav/Header/Header.css';
 
 const Banner = () => {
    return (

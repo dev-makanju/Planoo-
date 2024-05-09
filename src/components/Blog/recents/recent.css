@@ -1,0 +1,11 @@
+.recent-p h2{
+    font-size: 20px;
+    color: #000000ba;
+    padding-bottom: 1rem;
+}
+
+.recents{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
