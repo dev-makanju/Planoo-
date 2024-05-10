@@ -13,6 +13,7 @@ import GuestLayout from './components/layout/GuestLayout.jsx';
 import SingleBlog from './pages/SingleBlog.jsx';
 import PageTitle from './components/Nav/Meta/PageTitle.jsx';
 import NotFound from './pages/NotFound.jsx';
+import Pricing from './pages/Pricing.jsx';
 import './App.css'
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
                 <NotFound/>
               </>
             }/>
+            <Route exact path='/pricing' element={<GuestLayout><Pricing/></GuestLayout>}/>
             <Route element={<PrivateRoute/>}>
               {/* <Route path="/dashboard" element={<Dashboard/>} /> */}
             </Route>

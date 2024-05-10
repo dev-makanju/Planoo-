@@ -66,9 +66,12 @@ const Footer = () => {
                 <button className="btn-default">About</button>
               </li>
             </Link>
-            <li>
-              <button className="btn-default">Pricing</button>
-            </li>
+            
+            <Link to='/pricing'>
+              <li>
+                <button className="btn-default">Pricing</button>
+              </li>
+            </Link>
             <Link to='/blog'>
               <li>
                 <button className="btn-default">Blog</button>

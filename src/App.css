@@ -14,7 +14,7 @@ body{
    text-decoration: none;
 }
 
-.single-post {
+.single-post,.pricing-page {
    width: 80%;
    margin: 0px auto;
    min-height: 400px;
@@ -22,6 +22,21 @@ body{
    padding-top: 1rem;
    display: flex;
    gap: 1rem;
+}
+
+.pricing-tag small{
+   font-size: 12px;
+   display: flex;
+   align-self:center ;
+   justify-content: center;
+   color: #000000ba; 
+}
+
+.pricing-tag {
+   width: 50%;
+   margin: 0px auto;
+   text-align: center;
+   padding:  2rem 0px;
 }
 
 .blog-main{
@@ -57,9 +72,48 @@ body{
    }   
 }
 
+.pricing-setter.button{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 1rem;
+}
+
+.price-setter-main {
+   background: #7f7c7c4a;
+   padding: 1px;
+   display: flex;
+   border-radius: 8px;
+   width: 150px;
+}
+
+.price-setter-main button {
+   width: 100%;
+   border: none;
+   padding: 4px;
+   border-radius: 8px;
+}
+
+.active {
+   background: #7f7c7c4a;
+}
+
+.price-setter-main button:hover {
+   background: #7f7c7c4a;
+}
+
 @media (max-width: 1024px) {
-   .single-post {
+   .single-post,.pricing-page {
       display: flex;
       flex-direction: column;
    }
+
+   .pricing-tag {
+      width: 70%;
+   } 
+}
+
+@media (max-width: 500px) {
+   .pricing-tag {
+      width: 90%;
+   } 
 }

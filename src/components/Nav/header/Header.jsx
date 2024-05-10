@@ -27,9 +27,11 @@ const Header = () => {
               <button className="btn">
                 <li>Features</li>
               </button>
-              <button className="btn">
-                <li>Pricing</li>
-              </button>
+              <Link to='/pricing'>
+                <button className="btn">
+                  <li>Pricing</li>
+                </button>
+              </Link>
               <Link to='/about'>
                 <button className="btn">
                   <li>About</li>
@@ -67,9 +69,11 @@ const Header = () => {
               <button className="btn">
                 <li>Features</li>
               </button>
-              <button className="btn">
-                <li>Pricing</li>
-              </button>
+              <Link to='/pricing'>
+                <button className="btn">
+                  <li>Pricing</li>
+                </button>
+              </Link>
               <Link to='/about'>
                 <button className="btn">
                   <li>About</li>
