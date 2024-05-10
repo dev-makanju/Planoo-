@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from '../components/Home/Banner';
-import Header from '../components/Nav/Header/Header.jsx';
+import Header from '../components/Nav/header/Header.jsx';
 import Footer from '../components/Nav/Footer/Footer';
 import PlannoCard from '../components/Home/cards/PlannoCard';
 import Accordion from '../components/Home/accordion/accordion'

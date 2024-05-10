@@ -1,5 +1,5 @@
 import React from 'react'
-import Header from '../Nav/Header/Header'
+import Header from '../Nav/header/Header'
 import Footer from '../Nav/Footer/Footer'
 
 const GuestLayout = (props) => {
