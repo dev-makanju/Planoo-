@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PageTitle from '../components/Nav/Meta/PageTitle';
 import PricingCard from '../components/pricing/PricingCard';
 
@@ -9,7 +9,7 @@ const Pricing = () => {
             id: '1',
             type: 'free',
             currencyType: 'NGN',
-            amount: '100.00',
+            amount: '0.00',
             features: [
                 'Single users',
                 'Personal projects',
@@ -20,7 +20,7 @@ const Pricing = () => {
             id: '2',
             type: 'commercial',
             currencyType: 'NGN',
-            amount: '200.00',
+            amount: '1200.00',
             features: [
                 'Single users',
                 'Personal projects',
@@ -31,7 +31,7 @@ const Pricing = () => {
             id: '3',
             type: 'Extended',
             currencyType: 'NGN',
-            amount: '500.00',
+            amount: '60000.00',
             features: [
                 'Single users',
                 'Personal projects',
@@ -41,12 +41,23 @@ const Pricing = () => {
         }
     ]);
 
-    useEffect(() => {
+    const useEffectAfterMount = (cb, dependencies) => {
+        const mounted = useRef(false);
+        useEffect(() => {
+            if (mounted.current) {
+               cb();
+            }else{
+               mounted.current = true
+            }
+        }, dependencies);// eslint-disable-line react-hooks/exhaustive-deps
+    };
+    
+    useEffectAfterMount(() => {
         setPrice(prevPrice => prevPrice.map(item => {
-            if (isActive === 'is-month' || item.amount / 12 === 12 ) {
-                return { ...item, amount: item.amount * 1 };
+            if (isActive === 'is-month') {
+                return { ...item, amount: (parseFloat(item.amount) / 12).toFixed(2) };
             } else if (isActive === 'is-year') {
-                return { ...item, amount: item.amount * 12 };
+                return { ...item, amount: (parseFloat(item.amount) * 12).toFixed(2) };
             }
             return item;
         }));

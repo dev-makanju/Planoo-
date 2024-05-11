@@ -58,6 +58,52 @@ body{
    justify-content: center;
 }
 
+.about-container {
+   width: 100%;
+   margin: 0px auto;
+   background:#ffa60080;
+   height: 300px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.about-container h1 {
+   font-size: 43px;
+}
+
+
+.about-banner {
+   width: 200px;
+   margin-top: 2rem;   
+}
+
+.about-content{
+   width: 90%;
+   margin: 0px auto;
+   margin-top: 1rem;
+   font-size: 14px;
+   margin-bottom: 5rem;
+   color: #000000ba;
+   font-weight: 400;
+   line-height: 2;
+}
+
+.about-content span{
+   font-weight: bold;
+   font-size: 40px;
+}
+
+@media (min-width: 768px) {
+   .about-container {
+      width: 80%;
+   }
+   .about-content{
+      width: 60%;
+   }
+}
+
 .blog-is-empty h4 {
    font-size: 28px;
    color: #000000ba;
