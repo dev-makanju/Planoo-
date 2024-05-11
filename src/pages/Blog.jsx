@@ -45,7 +45,7 @@ const Blog = () => {
             ) : (
                 <div className='blog-wrapper'>
                     {posts.map((post) => (
-                        <PostCard key={post.id} content={post}/>
+                       <PostCard key={post.id} content={post}/>
                     ))}
                 </div>
             )}
