@@ -6,7 +6,6 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { reduceText } from '../../../utils/utils'; 
-import ReactLoading from "react-loading";
 
 const PostCard = ({content}) => {
   return (

@@ -20,7 +20,7 @@ const Pricing = () => {
             id: '2',
             type: 'commercial',
             currencyType: 'NGN',
-            amount: '1200.00',
+            amount: '100.00',
             features: [
                 'Single users',
                 'Personal projects',
@@ -31,7 +31,7 @@ const Pricing = () => {
             id: '3',
             type: 'Extended',
             currencyType: 'NGN',
-            amount: '60000.00',
+            amount: '1000.00',
             features: [
                 'Single users',
                 'Personal projects',

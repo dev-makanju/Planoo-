@@ -81,6 +81,13 @@ body{
    font-size: 43px;
 }
 
+.item-main {
+   width: 80%;
+}
+
+.item-recent {
+   width: 20%;
+}
 
 .card-link {
   text-decoration: none;
@@ -176,6 +183,14 @@ body{
    .pricing-tag {
       width: 70%;
    } 
+
+   .item-main {
+      width: 100%;
+   }
+   
+   .item-recent {
+      width: 100%;
+   }
 }
 
 @media (max-width: 500px) {
