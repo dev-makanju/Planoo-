@@ -2,7 +2,6 @@ import React from 'react';
 import '../single-post/SinglePost.css';
 import { formatTime } from '../../../utils/utils';
 import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
@@ -17,11 +16,16 @@ const CodeBlock = ({ node, inline, className, children, ...props }) => {
   );
 };
 
-const SinglePost = ({ post }) => {
-  const renderers = {
-    code: CodeBlock,
-  };
+const renderers = {
+  code: CodeBlock,
+  inlineCode: ({ node, inline, className, children, ...props }) => (
+    <code className={className} {...props}>
+      {children}
+    </code>
+  ),
+};
 
+const SinglePost = ({ post }) => {
   return (
     <div className='single-post-card'>
       <div className='image-container'>
@@ -39,7 +43,7 @@ const SinglePost = ({ post }) => {
           </ul>
         </div>
         <h1>{post.title}</h1>
-        <ReactMarkdown components={renderers} remarkPlugins={[remarkGfm()]}>{post.content}</ReactMarkdown>
+        <ReactMarkdown components={renderers}>{post.content}</ReactMarkdown>
       </div>
     </div>
   );

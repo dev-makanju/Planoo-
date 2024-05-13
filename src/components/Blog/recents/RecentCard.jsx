@@ -10,7 +10,7 @@ export default function RecentCard({post}) {
   return (
     <Box sx={{ minWidth: 275 }}>
       <Link className='link' to={`/blog/post/${post.slug}`}>
-        <Card variant="outlined">
+        <Card variant="outlined" key={post.id}>
           <CardContent>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
               {formatTime(post.timestamp)}
