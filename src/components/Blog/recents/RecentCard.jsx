@@ -5,6 +5,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import {formatTime, reduceText } from '../../../utils/utils'
 import { Link } from 'react-router-dom';
+import MarkDown from '../markdown/MarkDown';
 
 export default function RecentCard({post}) {
   return (
@@ -19,7 +20,7 @@ export default function RecentCard({post}) {
               {post.title}
             </Typography>
             <Typography variant="body2">
-              {reduceText(post.content, 50)}
+              <MarkDown content={reduceText(post.content, 70)}/>
             </Typography>
           </CardContent>
         </Card>

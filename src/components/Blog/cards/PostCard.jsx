@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { reduceText } from '../../../utils/utils'; 
+import MarkDown from '../markdown/MarkDown';
 
 const PostCard = ({content}) => {
   return (
@@ -24,7 +25,7 @@ const PostCard = ({content}) => {
             </Typography>
           </Link>
           <Typography variant="body2" color="text.secondary">
-            {reduceText(content.content , 70)}
+            <MarkDown content={reduceText(content.content , 70)}/>
           </Typography>
         </CardContent>
       </CardActionArea>
