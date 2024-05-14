@@ -1,0 +1,14 @@
+.bar-chart {
+    display: flex;
+    gap: 1rem;
+}
+
+.bar-chart div{
+    width: 30px
+}
+
+.bar {
+    height: 100px;
+    width: 40px;
+    background: red;
+}

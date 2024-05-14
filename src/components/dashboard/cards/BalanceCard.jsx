@@ -20,10 +20,13 @@ export default function BalanceCard(props) {
             1.098
             <br/>
           </Typography>
-          <Typography sx={{ fontSize: 14 }}>
-            chart
-            <br/>
-          </Typography>
+          <div className='bar-chart'>
+            <div className='bar-1 bar'></div>
+            <div className='bar-2 bar'></div>
+            <div className='bar-3 bar'></div>
+            <div className='bar-4 bar'></div>
+            <div className='bar-5 bar'></div>  
+          </div>
         </Box>
       </CardContent>
     </Card>
