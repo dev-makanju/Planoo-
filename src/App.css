@@ -6,6 +6,10 @@
    margin: 0;
 }
 
+hr {
+   border:.78px solid #5d5a5a2d;
+}
+
 body{
    font-family: 'Poppins', sans-serif;
 }
