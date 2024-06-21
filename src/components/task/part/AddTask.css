@@ -5,3 +5,107 @@
    color: #5a5959f7;
    font-weight: 300;
 }
+
+.board {
+   padding: 7px 5px;
+}
+
+.board h1{
+   font-size: 18px;
+   padding: 1rem 0px;
+}
+
+.task-board{
+   padding: 1rem;
+}
+
+.task-board .header {
+  background: #ffa60020;
+}
+
+.board {
+   background: #ffa60020;
+   padding: 1rem;
+}
+
+.template-card.planno-ai {
+  padding: 1rem;
+  border-radius: 7px;
+  border: .78px solid #eee;
+  max-width: 300px;
+  height: 130px;
+  background: #FFF;
+  position: relative;
+}
+
+.template-card.planno-ai h1 {
+   font-size: 14px;
+}
+
+.template-card.planno-ai p {
+   font-size: 12px;
+}
+ 
+.template-card.planno-ai .icons {
+   border-top: .78px solid #eee;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   padding: 7px 0px 8px 16px;
+}
+
+.template-card.planno-ai .icons span{
+   font-size: 10px;
+}
+
+.template-card.planno-ai .icons .preview span{
+   text-decoration: underline;
+   cursor: pointer;
+}
+
+.template__wrapper {
+   display: flex;
+   gap: 1rem;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+}
+
+.board__wrapper{
+   width: 100%;
+}
+
+.template__wrapper .wrapper_item{
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.template__wrapper_AI {
+   width: 60%;
+   margin: 0px auto;
+   padding: 3rem;
+}
+
+.template__wrapper_AI h2{
+   font-size: 20px;
+   text-align: center;
+}
+
+@media (max-width: 750px) {
+   .template-card.planno-ai {
+      max-width: fit-content;
+   }
+   .template__wrapper {
+      flex-direction: column;
+   }
+
+   .template__wrapper_AI {
+      width: 90%;
+      padding: 1rem;
+   }
+}

@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.dash-layout {
+  transition: all 0.3s ease;
+}
+
 .dash-logo {
   padding: 1.3rem 0px;
 }
@@ -14,13 +18,23 @@
 }
 
 .menu-bar {
-   background: #ffa60025;
-   position: fixed;
-   top: 0;
-   bottom: 0;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+  background: #ffa60025;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.menu-bar.open {
+  left: 0;
+}
+
+.menu-bar .close-menu {
+  display: none;
 }
 
 .menu-bar ul li a {
@@ -91,6 +105,14 @@
   align-self: center;
 } 
 
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+
 .location {
   display: flex;
   justify-content: space-between;
@@ -108,4 +130,42 @@
 
 .body-wrapper {
   min-height: 100vh;
+}
+
+.burger-menu{
+  background: none;
+  padding: 7px;
+  outline: none;
+  border: none;
+}
+
+
+@media (max-width: 768px) {
+  .menu-bar {
+    width: 0;
+    overflow: hidden;
+    background: #ffa600;
+  }
+
+  .menu-bar.open {
+    width:50px;
+  }
+
+  .menu-bar .close-menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+  }
+
+  .main-area {
+    margin-left: 0;
+  }
+
+  .burger-menu {
+    display: block;
+  }
 }

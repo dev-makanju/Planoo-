@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Auth/Login.jsx';
 import Dashboard from './components/dashboard/Dashboard';
 import PlannoAI from './components/planno-ai/PlannoAI.jsx';
-import Task from '../src/components/task/Task';
+import Task from '../src/pages/Task.jsx';
 import HomePage from './pages/HomePage.jsx';
 import Blog from './pages/Blog.jsx';
 import About from './pages/About.jsx';

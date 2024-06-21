@@ -1,76 +1,130 @@
 import React, {useState} from 'react';
-import TextField from '@mui/material/TextField';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
-import Button from '@mui/material/Button';
-import DatePicker from "react-datepicker";
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import TaskTemplateCard from './TaskTemplateCard';
 import "react-datepicker/dist/react-datepicker.css";
 import './AddTask.css'
+import './TaskModal.css'
 
-export default function FormDialog(props) {
-   const [startDate, setStartDate] = useState(new Date());
-  const handleClose = () => {
-    props.onCloseDialog(false);
-  };
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  overflow: 'auto',
+  width: '85%',
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  maxHeight: '550px',
+  p: 2,
+};
+
+export default function FormDialog() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   return (
-    <React.Fragment>
-      <Dialog
-        open={props.onOpenDialog}
-        onClose={handleClose}
-        PaperProps={{
-          component: 'form',
-          onSubmit: (event) => {
-            event.preventDefault();
-            const formData = new FormData(event.currentTarget);
-            const formJson = Object.fromEntries(formData.entries());
-            const email = formJson.email;
-            console.log(email);
-            handleClose();
-          },
-        }}
-      >
-        <DialogTitle>Add Task</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            To add task, you can require an assist from planno AI, you can also consider the manual entry option. This feature gives you the privilege to generate the AI yourself. 
-          </DialogContentText>
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="title"
-            name="title"
-            label="Task Title"
-            type="text"
-            fullWidth
-            variant="standard"
-          />
-          <TextField
-            autoFocus
-            required
-            margin="dense"
-            id="desc"
-            name="desc"
-            label="Description"
-            type="text"
-            fullWidth
-            multiline
-            maxRows={4}
-            variant="standard"
-          />
-          <div class="date-wrapper">
-          <DatePicker className='date-time' selected={startDate} onChange={(date) => setStartDate(date)}/>
-          </div>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Cancel</Button>
-          <Button type="submit">Submit</Button>
-        </DialogActions>
-      </Dialog>
-    </React.Fragment>
+    <>
+      <div>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <div className='modal'>
+              <div className='modal-container'>
+                  <div className='modal-header-container'>
+                      <span>T</span> <h1>End to End Test</h1>
+                  </div>
+                  <hr/>
+                  <div className='custom-tag'>
+                      <h1>Key deliverables</h1>
+                      <ul>
+                        <li>Enginerring report</li>
+                        <li>Proposal</li>
+                        <li>Design Drawing</li>
+                      </ul>
+
+                      <div className='custom-tag'>
+                        <h1>Requirements</h1>
+                        <ol>
+                          <li>Need to complete Enginerring report</li>
+                          <li>Need to complete Proposal report</li>
+                          <li>Need to complete Design Drawing</li>
+                        </ol>
+                      </div>
+                  </div>
+              </div>
+              <div className='modal-container dragable'>
+                  <div className='modal-header-container'>
+                     <p className='link-rel'>copy link</p>
+                     <p className='link-rel'>delete</p>
+                     <button className='modal-use-button'>USE TEMPLATE</button>
+                  </div>
+                  <hr/>
+                  <div className='custom-tag main'>
+                    <h1>Project overview</h1>
+                  </div>
+                  <img className='custom-card-img' src={process.env.PUBLIC_URL + '/assets/test-avater.jpeg'} alt=""/>                                       
+              </div>
+            </div>
+          </Box>
+        </Modal>
+      </div>    
+      <div className='task-board'>
+        <div className='board'>
+            <div className='board__wrapper'>
+                <div className='template__wrapper_AI'>
+                  <h2>What task do you want to create?</h2>
+                  <div>   
+                    <div className='form-control-banner'>
+                      <label htmlFor="text-search"></label>
+                      <input 
+                          type="text" 
+                          id="text-search" 
+                          placeholder="Hi there, how can i help you?"
+                      />
+                      <button>Ask</button>
+                    </div>
+                  </div>
+                </div>
+                <div className='template__wrapper'>
+                  <div className='wrapper_item'>
+                    <TaskTemplateCard 
+                      templateName='Pinterest pin description'
+                      templateDesc='Template inspired by the living legend in Nigeria'
+                      templateUsers='1000'
+                      handlePreview={handleOpen}
+                    />
+                    <TaskTemplateCard 
+                      templateName='Pinterest pin description'
+                      templateDesc='Template inspired by the living legend in Nigeria'
+                      templateUsers='1340'
+                      handlePreview={handleOpen}
+                    />
+                  </div>
+                  <div className='wrapper_item'>
+                    <TaskTemplateCard 
+                      templateName='Pinterest pin description'
+                      templateDesc='Template inspired by the living legend in Nigeria'
+                      templateUsers='1700'
+                      handlePreview={handleOpen}
+                    />
+                    <TaskTemplateCard 
+                      templateName='Pinterest pin description'
+                      templateDesc='Template inspired by the living legend in Nigeria'
+                      templateUsers='100'
+                      handlePreview={handleOpen}
+                    />
+                  </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </>
   );
 }

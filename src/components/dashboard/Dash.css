@@ -90,3 +90,17 @@
 .box-card-GPT{
    flex: 1;
 }
+
+
+@media (max-width: 800px) {
+   .dash-main_widget {
+      flex-direction: column;
+   }  
+   .mini-widget {
+      flex-direction: column;
+   }
+   .custom-card{
+      max-width: 100%;
+   }
+
+}

@@ -9,8 +9,6 @@ const PlannoAI = () => {
     <DashboardLayout>
        <div className='Planno_main'>
           {/* Add a dashboard for viewing responses */}
-
-          
           <Box sx={{ width: 500,maxWidth: '100%',}}>
             <TextField fullWidth label="Need help?" id="fullWidth" />
           </Box>

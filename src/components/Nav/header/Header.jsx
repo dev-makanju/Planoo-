@@ -19,13 +19,13 @@ const Header = () => {
                 <div className="orange-logo"></div>
                 <div className="orange-shade-logo"></div>
               </div>
-              <h1>planoo</h1>
+              <h1>LMS</h1>
             </button>
           </Link>   
           <nav>
             <ul className="menu-container">
               <button className="btn">
-                <li>Features</li>
+                <li>Feature</li>
               </button>
               <Link to='/pricing'>
                 <button className="btn">

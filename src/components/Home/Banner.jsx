@@ -7,7 +7,7 @@ const Banner = () => {
          <div className='banner-text main-text'>
             <div className='text-container'>
                <div>   
-                  <h1>Get ready to <span class="black">supercharge</span> your goal-setting and planning with AI Planner</h1>
+                  <h1>Get ready to <span class="black">supercharge</span> your goal-setting and planning with AI Planner.</h1>
                   <div className='form-control-banner'>
                      <label htmlFor="text-search"></label>
                      <input 
