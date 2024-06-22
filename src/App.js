@@ -41,7 +41,7 @@ function App() {
             {/* Other routes */}
             <Route path="/dashboard" element={<Dashboard/>} />
             <Route path="/manage-task" element={<Task/>} />
-            <Route path="/planno-ai" element={<PlannoAI/>} />
+            <Route path="/manage-task/templates/:id" element={<PlannoAI/>} />
           </Routes>
         </AuthProvider>
       </Router>

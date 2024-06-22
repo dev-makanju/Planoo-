@@ -141,6 +141,10 @@
 
 
 @media (max-width: 768px) {
+  .onMobile {
+    display: none;
+  }
+
   .menu-bar {
     width: 0;
     overflow: hidden;
@@ -148,7 +152,7 @@
   }
 
   .menu-bar.open {
-    width:50px;
+    width:75px;
   }
 
   .menu-bar .close-menu {

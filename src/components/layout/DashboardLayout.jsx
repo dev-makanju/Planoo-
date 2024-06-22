@@ -46,16 +46,6 @@ const DashboardLayout = (props) => {
                 <TaskIcon />
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                to="/planno-ai"
-                className={({ isActive, isPending }) =>
-                  isPending ? "pending" : isActive ? "active" : ""
-                }
-              >
-                <QuestionAnswerIcon />
-              </NavLink>
-            </li>
           </ul>
         </nav>
         <button className="close-menu" onClick={toggleMenu}>
@@ -71,10 +61,10 @@ const DashboardLayout = (props) => {
             <span>
               <LocationOnIcon />
             </span>
-            <h3>Lagos, Nigeria</h3>
+            <h3><span className="onMobile">Lagos,</span>Nigeria</h3>
           </div>
           <ul className="avater">
-            <li>Oluwafemi</li>
+            <li className="onMobile">Oluwafemi</li>
             <div className="main-wrapper">
               <div className="custom-avater">
                 <small>OP</small>

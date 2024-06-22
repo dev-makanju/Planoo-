@@ -1,0 +1,133 @@
+.droppable-container {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 4px;
+    flex: 1;
+    height: 100vh;
+  }
+
+  .Planno_main {
+    background: #ffa60020;
+    margin: 1rem;
+  }
+  
+  .draggable-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .status_wrapper {
+    display: flex;
+  }
+
+  .task_header {
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-bottom: 1rem;
+  }
+
+  .task_header h3 {
+    font-size: 12px;
+    color: #00000079;
+  }
+
+  .status_length{
+    font-size: 12px;
+    color: #0000006b;
+  }
+
+  .To.do{
+    border-bottom: 4px solid #ff0000;
+  }
+
+  .Backlog{
+    border-bottom: 4px solid #9e9e3376;
+  }
+
+  .Progress {
+    border-bottom: 4px solid #0000ff;
+  }
+
+  .Approved{
+    border-bottom: 4px solid #008000;
+  }
+
+  .logo.icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .approved.logo{
+    color: #008000;
+  }
+  .pending.logo {
+    color: #0000ff;
+  }
+  .backlog.logo {
+    color: #9e9e3376;
+  }
+
+  .draggable-item h1{
+    font-size: 12px;
+  }
+
+  .draggable-item p{
+    font-size: 10px;
+    color: #0000006b;
+  }
+
+  .task-details {
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .task-completed-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .task-completed-wrapper p{
+    font-size: 10px;
+    color: #0000006b;
+    font-weight: thin;
+  }
+
+  .toggle-button {
+    background: none;
+    border: none;
+    font-size: 10px;
+    color: #0000006b;
+    text-decoration: underline;
+  }
+
+  .task-details ul li {
+    font-size: 10px;
+    margin-left: 5px;
+    color: #0000006b;
+  }
+
+  .task-details ul li input {
+    font-size: 10px;
+    margin-left: 5px;
+    float: left;
+    margin-right: .5rem;
+  }
+  
+  ul li {
+    margin-bottom: 5px;
+  }
