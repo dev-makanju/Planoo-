@@ -5,8 +5,11 @@ import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import PendingIcon from '@mui/icons-material/Pending';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import AddToQueueIcon from '@mui/icons-material/AddToQueue';
+import  Drawer  from './part/Drawer';
 
 const PlannoAI = () => {
+  const [openDrawer, setOpenDrawer] = useState(false)
+
   const initialData = {
     'To do': [
       { id: 'card-1', 
@@ -68,9 +71,18 @@ const PlannoAI = () => {
     setTaskStatuses(updatedStatuses);
   };
 
+  const handleCloseDrawer = () => {
+    setOpenDrawer(false);
+  }
+
+  const toggleDrawer = () => {
+    setOpenDrawer(true);
+  }
+
   return (
     <DashboardLayout>
       <div className="Planno_main">
+        <Drawer openDrawer={openDrawer} closeDrawer={handleCloseDrawer}/>
         <DragDropContext onDragEnd={onDragEnd}>
           <div className='status_wrapper'>
             {Object.keys(taskStatuses).map((status, index) => (
@@ -81,12 +93,18 @@ const PlannoAI = () => {
                     {...provided.droppableProps}
                     className="droppable-container"
                   >
-                    <div className={`task_header ${status}`}>
-                      {status === 'Approved' && (<CheckCircleIcon className='approved logo icon'/>)}
-                      {status === 'In Progress' && (<PendingIcon className='pending logo icon'/>)}
-                      {status === 'Request Backlog' && (<AddToQueueIcon className='backlog logo icon'/>)}
-                      <h3>{status}</h3>
-                      <p className='status_length'>{taskStatuses[status].length}</p>
+                    <div className={`task_header_wrapper ${status}`}>
+                      {/* Add task */}
+                      <div  className={`task_header`}>
+                        {status === 'Approved' && (<CheckCircleIcon className='approved logo icon'/>)}
+                        {status === 'In Progress' && (<PendingIcon className='pending logo icon'/>)}
+                        {status === 'Request Backlog' && (<AddToQueueIcon className='backlog logo icon'/>)}
+                        <h3>{status}</h3>
+                        <p className='status_length'>{taskStatuses[status].length}</p>
+                      </div>
+                      <div>
+                        {status === 'To do' && (<button className='custom__add' onClick={() => toggleDrawer()}>+ Add Task</button>)}
+                      </div>
                     </div>
                     {taskStatuses[status].map((task, index) => (
                       <Draggable key={task.id} draggableId={task.id} index={index}>
