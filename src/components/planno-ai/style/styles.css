@@ -121,6 +121,34 @@
     margin-bottom: 1rem;
   }
 
+  .form_task_control {
+    background: #00000013;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 2px;
+    border-radius: 7px;
+    margin-top: 1rem;
+  }
+  .form_task_control input {
+    border: none;
+    outline: none;
+    width: 80%;
+    background: #00000014;
+    padding: 7px;
+  }
+
+  .create-task {
+    border: 2px solid #eee;
+    border-radius: 7px;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+
+  .create-task-header {
+    margin-bottom: 1rem;
+  }
+
   .custom__add {
     border: none;
     background: none;
