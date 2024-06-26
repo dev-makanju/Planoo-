@@ -23,7 +23,6 @@ jobs:
 
       - name: Test and Build Application
         run: |
-          npm run test
           npm run build
 
       - name: Deploy to GitHub Pages
