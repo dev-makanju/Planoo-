@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Planoo-/static/css/main.53864a38.css",
+    "main.js": "/Planoo-/static/js/main.3fe334a5.js",
+    "static/js/453.4d1e5ba5.chunk.js": "/Planoo-/static/js/453.4d1e5ba5.chunk.js",
+    "static/js/198.9cd2d91b.chunk.js": "/Planoo-/static/js/198.9cd2d91b.chunk.js",
+    "index.html": "/Planoo-/index.html",
+    "main.53864a38.css.map": "/Planoo-/static/css/main.53864a38.css.map",
+    "main.3fe334a5.js.map": "/Planoo-/static/js/main.3fe334a5.js.map",
+    "453.4d1e5ba5.chunk.js.map": "/Planoo-/static/js/453.4d1e5ba5.chunk.js.map",
+    "198.9cd2d91b.chunk.js.map": "/Planoo-/static/js/198.9cd2d91b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53864a38.css",
+    "static/js/main.3fe334a5.js"
+  ]
+}
